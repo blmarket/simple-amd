@@ -1,0 +1,41 @@
+{
+  "name": "simple-amd",
+  "version": "0.1.0",
+  "description": "Isolated amd loader replacement",
+  "license": "MIT",
+  "repository": {
+      "type": "git",
+      "url": "git+ssh://git@github.com/blmarket/simple-amd.git"
+  },
+  "bugs": {
+      "url": "https://github.com/blmarket/simple-amd/issues"
+  },
+  "author": "blmarket <blmarket@gmail.com>",
+  "keywords": [
+    "amd", "pouchdb", "couchdb", "db", "observable"
+  ],
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "devDependencies": {
+    "del": "2.0.2",
+    "gulp": "^3.9.0",
+    "gulp-help": "^1.6.0",
+    "gulp-inject": "3.0.0",
+    "gulp-jasmine": "^2.0.1",
+    "gulp-sequence": "0.4.1",
+    "gulp-tsconfig-files": "0.0.2",
+    "gulp-tslint": "^3.1",
+    "jasmine": "^2.3.1"
+  },
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "optionalDependencies": {
+    "rxjs": "^5.0.0-beta.2"
+  }
+}
