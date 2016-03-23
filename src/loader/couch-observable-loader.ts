@@ -5,8 +5,8 @@
  */
 'use strict';
 
-import {PouchDB} from './common-types';
-import create_observable_document from './observable_pouch';
+import {PouchDB} from './../common-types';
+import create_observable_document from './../observable_pouch';
 
 function create(db: PouchDB) {
   const topic_factory = create_observable_document(db);

@@ -3,7 +3,7 @@
  */
 'use strict';
 
-import {PouchDB} from './common-types';
+import {PouchDB} from './../common-types';
 
 function create(db: PouchDB) {
   return function (name: string, req: any, onload: any) {
