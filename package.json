@@ -23,8 +23,7 @@
   ],
   "main": "lib/index.js",
   "scripts": {
-    "test": "gulp test",
-    "postinstall": "tsd install"
+    "test": "gulp test"
   },
   "devDependencies": {
     "del": "2.0.2",
