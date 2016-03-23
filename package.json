@@ -4,22 +4,27 @@
   "description": "Isolated amd loader replacement",
   "license": "MIT",
   "repository": {
-      "type": "git",
-      "url": "git+ssh://git@github.com/blmarket/simple-amd.git"
+    "type": "git",
+    "url": "git+ssh://git@github.com/blmarket/simple-amd.git"
   },
   "bugs": {
-      "url": "https://github.com/blmarket/simple-amd/issues"
+    "url": "https://github.com/blmarket/simple-amd/issues"
   },
   "author": "blmarket <blmarket@gmail.com>",
   "keywords": [
-    "amd", "pouchdb", "couchdb", "db", "observable"
+    "amd",
+    "pouchdb",
+    "couchdb",
+    "db",
+    "observable"
   ],
   "files": [
     "lib"
   ],
   "main": "lib/index.js",
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "postinstall": "tsd install"
   },
   "devDependencies": {
     "del": "2.0.2",
