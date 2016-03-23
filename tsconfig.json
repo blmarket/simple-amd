@@ -9,12 +9,17 @@
     "preserveConstEnums": true,
     "removeComments": true
   },
+  "filesGlob": [
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
   "files": [
     "src/common-types.ts",
-    "src/couch-attachment-loader.ts",
-    "src/couch-observable-loader.ts",
     "src/default-loader.ts",
     "src/index.ts",
-    "src/observable_pouch.ts"
+    "src/observable_pouch.ts",
+    "src/loader/couch-attachment-loader.ts",
+    "src/loader/couch-observable-loader.ts",
+    "src/loader/require-loader.ts"
   ]
 }
