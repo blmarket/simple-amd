@@ -20,6 +20,7 @@
     "src/observable_pouch.ts",
     "src/loader/couch-attachment-loader.ts",
     "src/loader/couch-observable-loader.ts",
+    "src/loader/factory-loader.ts",
     "src/loader/require-loader.ts"
   ]
 }

@@ -8,6 +8,7 @@ import Loader from './index';
 import create_attachment_loader from './loader/couch-attachment-loader';
 import create_doc_loader from './loader/couch-observable-loader';
 import require_loader from './loader/require-loader';
+import factory_loader from './loader/factory-loader';
 
 function create_loader(db: PouchDB, modules: TypeMap<any>): Loader {
   const attachment_loader = create_attachment_loader(db);
@@ -17,6 +18,7 @@ function create_loader(db: PouchDB, modules: TypeMap<any>): Loader {
     paths: {
       attachment: attachment_loader,
       doc: doc_loader,
+      factory: factory_loader,
       require: require_loader
     }
   });
