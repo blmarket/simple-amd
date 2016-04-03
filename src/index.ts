@@ -65,7 +65,7 @@ class Loader {
         return;
       }
 
-      this.paths[prefix](name, null, resolve);
+      this.paths[prefix].call(this, name, null, resolve);
     });
   }
 
