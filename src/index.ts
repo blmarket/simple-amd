@@ -52,7 +52,8 @@ class Loader {
         const amd_define = (deps: string[], fn: any) => {
           resolve(this.require(deps, fn));
         };
-        new Function('define', text)(amd_define);
+        let exports = {};
+        new Function('define', 'exports', text)(amd_define, exports);
       };
 
       if (!prefix) {
