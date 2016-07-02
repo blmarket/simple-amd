@@ -17,10 +17,16 @@ interface AMDModuleDef {
   (dependencies: any[]): any;
 }
 
+interface PouchDoc {
+  _id: string;
+  _rev: string;
+}
+
 interface PouchDB {
   getAttachment: (docId: string, attachmentId: string, callback: (err: any, doc: Blob|Buffer) => void)
     => Promise<Object>;
-  get: (docId: string) => Promise<Object>;
+  get: (docId: string) => Promise<PouchDoc>;
+  put: (doc: Object) => Promise<Object>;
 }
 
-export {TypeMap, Pair, AMDModuleDef, PouchDB};
+export {TypeMap, Pair, AMDModuleDef, PouchDoc, PouchDB};

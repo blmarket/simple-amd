@@ -4,6 +4,7 @@
 'use strict';
 
 import {TypeMap, Pair, AMDModuleDef} from './common-types';
+import create_loader from './loader';
 
 interface LoaderOpts {
   paths?: TypeMap<any>;
@@ -87,4 +88,4 @@ class Loader {
   }
 }
 
-export { LoaderOpts, Loader, Loader as default };
+export { create_loader, LoaderOpts, Loader, Loader as default };

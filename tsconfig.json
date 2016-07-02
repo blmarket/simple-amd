@@ -18,9 +18,11 @@
     "src/default-loader.ts",
     "src/index.ts",
     "src/observable_pouch.ts",
+    "src/loader/cache-loader.ts",
     "src/loader/couch-attachment-loader.ts",
     "src/loader/couch-observable-loader.ts",
     "src/loader/factory-loader.ts",
+    "src/loader/index.ts",
     "src/loader/require-loader.ts"
   ]
 }
