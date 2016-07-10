@@ -36,7 +36,7 @@ function create_change(db: any): Observable<PouchChange> {
  * @param db PouchDB database instance.
  * @returns {(String)=>Observable<PouchDocument>} factory function which creates observable for given document.
  */
-function create_observable_document(db: PouchDB): (p1: string, p2: boolean) => Observable<Object> {
+function create_observable_document(db: PouchDB): (arg1: string, arg2: boolean) => Observable<Object> {
   const topic: Observable<PouchChange> = create_change(db);
   return function (doc_id: string, immediate: boolean): Observable<Object> {
     const ret = topic.filter(ch => ch.id === doc_id).flatMap(() => {
@@ -49,4 +49,5 @@ function create_observable_document(db: PouchDB): (p1: string, p2: boolean) => O
   };
 }
 
+export { PouchChange, create_change };
 export default create_observable_document;
