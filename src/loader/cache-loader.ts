@@ -20,7 +20,7 @@ function create_cache_loader(db: PouchDB) {
 
     const subject = new BehaviorSubject<PouchDoc>(null);
     function update() {
-      Observable.from(db.get(source.name)).subscribe(subject);
+      Observable.fromPromise(db.get(source.name)).subscribe(subject);
     }
     update();
 

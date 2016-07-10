@@ -12,15 +12,14 @@ function createObservable<T>(factory: () => Promise<T>): Observable<T> {
 
   if (topic instanceof Promise) {
     const lazyRec: () => Observable<T> = () => {
-      console.log('here');
-      return Observable.defer(factory).concat(
+      return Observable.fromPromise(factory()).concat(
           Observable.timer(60 * 60 * 1000).flatMap(() => lazyRec()));
     };
 
     return Observable.fromPromise(topic).concat(
         Observable.timer(60 * 60 * 1000).flatMap(() => lazyRec()));
   } else {
-    return Observable.from<T>(topic);
+    return Observable.fromPromise(topic);
   }
 }
 
