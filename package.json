@@ -35,7 +35,8 @@
     "gulp-sequence": "0.4.1",
     "gulp-tsconfig-files": "0.0.2",
     "gulp-tslint": "^3.1",
-    "jasmine": "^2.4.1"
+    "jasmine": "^2.4.1",
+    "pouchdb": "^5.4.5"
   },
   "engines": {
     "node": ">=0.12.0"
